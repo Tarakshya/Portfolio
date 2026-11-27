@@ -6,3 +6,5 @@ how each was built, and a resume. Hosted on Vercel; no build step.
 To preview locally, open `index.html` in a browser.
 
 How changes go live: see `CLAUDE.md`.
+
+Live at https://tarakshyamehrish.vercel.app (Vercel serves the `main` branch).
