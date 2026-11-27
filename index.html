@@ -102,15 +102,25 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .mini.thesis { background: #F4F0E8; display: grid; place-items: center; left: calc(50% + 2px); transform: rotate(5deg); transform-origin: bottom left; border: 1px solid #E7E0D2; }
 .mini.thesis span { font-family: var(--serif); font-size: clamp(18px, 4.4vh, 34px); color: #1D1B17; }
 .mini.thesis i { color: var(--amber); font-style: normal; }
-.doc { display: grid; align-content: center; gap: 12px; padding: 4% 14% 0; min-height: 0; overflow: hidden; }
-.doc i { display: block; height: 8px; border-radius: 4px; background: #24365A; }
-.doc i:nth-child(1) { width: 55%; height: 14px; background: #3A5075; }
-.doc i:nth-child(2) { width: 90%; } .doc i:nth-child(3) { width: 78%; } .doc i:nth-child(4) { width: 86%; } .doc i:nth-child(5) { width: 60%; }
+.sheet-back, .paper { position: absolute; top: 7%; height: 90%; aspect-ratio: 8.5 / 11; left: 50%; border-radius: 6px; }
+.sheet-back { background: #DCD6C8; transform: translateX(-50%) rotate(6deg); opacity: .55; }
+.paper { background: #FBF9F4; transform: translateX(-50%) rotate(-3deg); padding: 7% 8%; display: flex; flex-direction: column; gap: 3.2%;
+  box-shadow: 0 16px 30px -16px rgba(0,0,0,.6); overflow: hidden; }
+.paper span { display: block; flex: none; }
+.p-name { height: 6%; width: 58%; background: #1D2B45; border-radius: 2px; }
+.p-sub { height: 2.2%; width: 74%; background: #B9C2D0; border-radius: 2px; }
+.p-rule { height: 1.5px; background: var(--teal); margin: 1% 0; }
+.p-h { height: 2.4%; width: 28%; background: #6B7A92; border-radius: 2px; margin-top: 2%; }
+.p-l { height: 1.7%; background: #D3D9E2; border-radius: 2px; }
+.p-row { display: flex !important; justify-content: space-between; align-items: center; gap: 8%; }
+.p-row .p-l { height: auto; min-height: 5px; background: #8E9AAE; }
+.p-d { width: 18%; min-height: 4px; background: #C7CFDA; border-radius: 2px; }
+.w9 { width: 92%; } .w8 { width: 82%; } .w7 { width: 72%; } .w6 { width: 62%; } .w5 { width: 52%; } .w4 { width: 44%; }
 @media (min-width: 760px) {
   .tiles { grid-template-columns: 1fr 1fr; grid-template-rows: minmax(0, 1fr); width: 100%; max-width: 900px; margin: 0 auto;
     height: min(500px, calc(100dvh - 60px - var(--bar) - 90px)); }
   .home.on { display: grid; align-content: center; min-height: calc(100dvh - 60px - var(--bar) - 44px); }
-  .mini { top: 7%; height: 78%; }
+  .mini, .sheet-back, .paper { top: 7%; height: 78%; }
 }
 .apps .cards { max-width: 880px; margin: 0 auto; }
 
@@ -220,7 +230,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
       <span class="tile-foot"><b>Apps</b><span class="go" aria-hidden="true">→</span></span>
     </a>
     <a class="tile tile-resume" href="#resume">
-      <span class="doc" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+      <span class="peek" aria-hidden="true"><span class="sheet-back"></span><span class="paper"><span class="p-name"></span><span class="p-sub"></span><span class="p-rule"></span><span class="p-h"></span><span class="p-l w9"></span><span class="p-l w8"></span><span class="p-l w6"></span><span class="p-h"></span><span class="p-row"><span class="p-l w5"></span><span class="p-d"></span></span><span class="p-l w9"></span><span class="p-l w7"></span><span class="p-l w8"></span><span class="p-row"><span class="p-l w4"></span><span class="p-d"></span></span><span class="p-l w9"></span><span class="p-l w6"></span><span class="p-h"></span><span class="p-l w7"></span></span></span>
       <span class="tile-foot"><b>Resume</b><span class="go" aria-hidden="true">→</span></span>
     </a>
   </div>
